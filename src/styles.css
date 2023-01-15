@@ -1,1 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body {
+  height: 100%;
+  font-family: 'Roboto Light';
+  background-color: aquamarine;
+}
+
+.error {
+  color: red;
+  font-size: 1rem;
+}
+
+.header__title_animation {
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%,
+    #ff1361 67%,
+    #44107a 29%,
+    #231557 0%
+  );
+  background-size: 200% auto;
+  color: #fff;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 4s linear infinite;
+  display: inline-block;
+}
+
+.header {
+  display: flex;
+  background-color: #48466D;
+  justify-content: space-around;
+}
+
+.header__title {
+  font-size: 1.4rem;
+}
+
+

@@ -1,0 +1,60 @@
+<div class="header">
+  <h3 class="header__title header__title_animation">Ivanov Nikita P32302 var:55296</h3>
+</div>
+<div class="graph">
+  <h3 class="header__title header__title_animation">Graphic</h3>
+  <div class="graph__plot">
+    <canvas #canvas height="360" width="360" (click)="doSome($event)"></canvas>
+  </div>
+
+  <div class="form">
+    <h4 class="header__title header__title_animation">Form with coordinates</h4>
+    <form>
+      <label for="x" *ngIf="isxError" class="error">x must be in (-3;5)</label>
+      <p>
+        <label for="x" class="label">X:</label>
+        <input [(ngModel)]="x" [ngModelOptions]="{standalone: true}" id="x" type="text" class="form__field"
+               maxlength="16" placeholder="input x:"/>
+      </p>
+      <label for="y" *ngIf="isyError" class="error">y must be in (-3;5)</label>
+      <p>
+        <label for="y" class="label">Y:</label>
+        <input [(ngModel)]="y" [ngModelOptions]="{standalone: true}" id="y" type="text" class="form__field"
+               maxlength="16" placeholder="input y:"/>
+      </p>
+      <label for="r" *ngIf="isrError" class="error">r must be in (3;5)</label>
+      <p>
+        <label for="r" class="label">R:</label>
+        <input [(ngModel)]="r" [ngModelOptions]="{standalone: true}" id="r" type="text" class="form__field"
+               maxlength="16" placeholder="input r:"/>
+      </p>
+      <button type="button" class="btn btn--primary btn--inside uppercase" (click)="send(save, x, y)">send</button>
+    </form>
+  </div>
+  <h4 class="header__title header__title_animation">Table with results</h4>
+
+  <table>
+    <thead>
+    <tr>
+      <th>X</th>
+      <th>Y</th>
+      <th>R</th>
+      <th>Date</th>
+      <th>Time work</th>
+      <th>Hit</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let attempts of data">
+        <td>{{attempts.x}}</td>
+        <td>{{attempts.y}}</td>
+        <td>{{attempts.r}}</td>
+        <td>{{attempts.dateOfInit}}</td>
+        <td>{{attempts.timeWork / 100000}}</td>
+        <td>{{attempts.hit}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+

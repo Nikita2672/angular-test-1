@@ -1,0 +1,89 @@
+
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+
+
+#author {
+  font-size: 1.3rem;
+}
+
+.header {
+  display: flex;
+  background-color: #48466D;
+  justify-content: space-around;
+}
+
+.graph__plot {
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: #48466D;
+}
+
+.graph {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #48466D;
+  border-radius: 5px;
+}
+
+.btn {
+  display: inline-block;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  transition: all 200ms ease-in;
+  cursor: pointer;
+}
+
+.btn--primary {
+  background: #39f;
+  color: #fff;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  padding: 12px 36px;
+}
+
+.btn--primary {
+  background: #39f;
+  color: #fff;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 12px 36px;
+}
+
+.label {
+  color: deeppink;
+}
+table {
+  min-width: 360px;
+  margin-bottom: 20px;
+  border: 1px solid #dddddd;
+  border-collapse: collapse;
+  background-color: #f5f6fa;
+  border-radius: 5px;
+}
+table th {
+  font-weight: bold;
+  padding: 5px;
+  background: #efefef;
+  border: 1px solid #dddddd;
+}
+table td {
+  border: 1px solid #dddddd;
+  padding: 5px;
+}

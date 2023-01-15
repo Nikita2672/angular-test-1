@@ -1,0 +1,26 @@
+<div class="header">
+  <h3 class="header__title header__title_animation">Ivanov Nikita P32302 var:55296</h3>
+</div>
+<div class="container">
+
+  <div class="container__item">
+    <p class="error" *ngIf="isErrorAuthorization">There is wrong login or password</p>
+    <p class="error" *ngIf="isErrorRegister">This login is already occupied</p>
+    <form class="form">
+      <label for="email" *ngIf="isLoginError" class="error">Min length 4:</label>
+      <p>
+        <input id="email" type="email" class="form__field" maxlength="100" placeholder="Your login" [(ngModel)]="login" [ngModelOptions]="{standalone: true}"/>
+      </p>
+      <label for="password" *ngIf="isPasswordError" class="error">Min length 4:</label>
+      <p>
+        <input id="password" type="password" class="form__field" maxlength="100" placeholder="Your password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}"/>
+      </p>
+      <p>
+        <button type="button" class="btn btn--primary btn--inside uppercase" (click)="authorize()">Login</button>
+      </p>
+      <p>
+        <button type="button" class="btn btn--primary btn--inside uppercase" (click)="register()">Register</button>
+      </p>
+    </form>
+  </div>
+</div>
